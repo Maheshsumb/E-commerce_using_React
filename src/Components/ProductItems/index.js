@@ -2,17 +2,13 @@ import { Button } from "@mui/material";
 import Rating from "@mui/material/Rating";
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
-import ProductModal from "../ProductModal";
-import { useState } from "react";
-
+import { useContext } from "react";
+import { MyContext } from "../../App";
 const ProductItems = () => {
-  const [isOpenProductModal, setisOpenProductModal] = useState(false);
+  const context = useContext(MyContext);
 
   const viewProductDetails = (id) => {
-    setisOpenProductModal(true);
-  };
-  const closeProductModal = () => {
-    setisOpenProductModal(false);
+    context.setisOpenProductModal(true);
   };
 
   return (
@@ -55,9 +51,6 @@ const ProductItems = () => {
           </div>
         </div>
       </div>
-      {isOpenProductModal === true && (
-        <ProductModal closeProductModal={closeProductModal} />
-      )}
     </>
   );
 };
