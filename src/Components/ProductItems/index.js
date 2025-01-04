@@ -4,7 +4,7 @@ import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useContext } from "react";
 import { MyContext } from "../../App";
-const ProductItems = () => {
+const ProductItems = (props) => {
   const context = useContext(MyContext);
 
   const viewProductDetails = (id) => {
@@ -13,7 +13,7 @@ const ProductItems = () => {
 
   return (
     <>
-      <div className="item productItem cursor">
+      <div className={`item productItem  cursor ${props.itemView}`}>
         <div className="imageWrapper">
           <img
             className="w-100"
