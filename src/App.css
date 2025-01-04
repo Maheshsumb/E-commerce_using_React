@@ -961,14 +961,14 @@ footer .copyright ul li a svg {
 }
 
 .zoomSlider .item {
-  border: 2px solid transparent !important;
+  /* border: 2px solid transparent !important; */
   overflow: hidden;
   border-radius: 15px !important;
   cursor: pointer;
 }
 
-.zoomSlider .slick-current .item {
-  border: 2px solid #3bb77e !important;
+.item_active {
+  border: 2px solid rgba(0, 0, 0, 0.2) !important;
 }
 
 .zoomSlider .slick-arrow {
