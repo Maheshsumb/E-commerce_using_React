@@ -8,6 +8,7 @@ import axios from "axios";
 import Footer from "./Components/Footer";
 import ProductModal from "./Components/ProductModal";
 import Listing from "./Pages/Listing";
+import ProductDetails from "./Pages/ProductDetails";
 
 const MyContext = createContext();
 function App() {
@@ -40,6 +41,13 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/cat/:id" exact={true} element={<Listing />} />
+        </Routes>
+        <Routes>
+          <Route
+            path="/product/:id"
+            exact={true}
+            element={<ProductDetails />}
+          />
         </Routes>
         <Footer />
         {isOpenProductModal === true && <ProductModal />}

@@ -17,7 +17,7 @@
 
 body {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
   overflow-x: hidden;
 
@@ -45,8 +45,12 @@ body {
   font-size: 20px !important;
 }
 
+.btn-circle {
+  border-radius: 50% !important;
+}
+
 .btn-blue {
-  background: #223a94 !important;
+  background: var(--mainColor) !important;
   color: white !important;
   text-transform: capitalize !important;
   ;
@@ -59,6 +63,10 @@ body {
 
 button {
   text-transform: capitalize !important;
+}
+
+.textUpperCase {
+  text-transform: uppercase !important;
 }
 
 .btn-round {
@@ -1020,6 +1028,11 @@ footer .copyright ul li a svg {
   color: #000 !important;
 }
 
+.quantityDropDown button:hover {
+  background: #ccc !important;
+
+}
+
 .quantityDropDown input {
   width: 30px;
   background: transparent;
@@ -1200,4 +1213,183 @@ footer .copyright ul li a svg {
 
 .productListing .productItem.one .imageWrapper {
   width: 25%;
+}
+
+.section {
+  padding: 45px 0px;
+}
+
+.productDetails .hd {
+  font-size: 26px;
+}
+
+.productDetails .lgO {
+  font-size: 22px !important;
+}
+
+.productDetails .lgN {
+  font-size: 24px !important;
+}
+
+.productSize {
+  width: 100%;
+  height: auto;
+  padding: 25px 8px;
+}
+
+.productSize ul li {
+  margin-right: 10px !important;
+}
+
+/* used a insted of button */
+.productSize ul li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #000;
+  font-size: 14px !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.productSize ul li button:hover {
+  background: #ccc !important;
+}
+
+.productSize ul li button.active {
+  background: var(--mainColor);
+  color: #fff !important;
+}
+
+.productDetails .btn-circle {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  font-weight: 600 !important;
+  background: #edeef5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000 !important;
+  padding: 5px !important;
+  font-weight: bold !important;
+}
+
+.productDetails .btn-circle svg {
+  font-size: 18px;
+  color: #000 !important;
+  opacity: 0.8;
+}
+
+.productDetails .btn-circle:hover {
+  background: #ccc !important;
+}
+
+.detailsPageTabs {
+  background: #fafafa;
+  border-radius: 25px !important
+}
+
+.customTabs ul li {
+  margin-right: 10px !important
+}
+
+.customTabs ul li button {
+  padding: 6px 25px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 30px !important;
+  color: #000 !important;
+  font-size: 14px !important;
+  padding: 6px 25px !important;
+  text-transform: capitalize !important
+}
+
+.customTabs ul li button.active {
+  background: var(--mainColor) !important;
+  color: #fff !important
+}
+
+.reviewsCard {
+  /* border-radius: 10px !important; */
+  margin-bottom: 25px !important
+}
+
+.reviewsCard .image {
+  width: 100px
+}
+
+.reviewsCard .rounded-circle {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  overflow: hidden;
+  width: 100px
+}
+
+.reviewsCard .rounded-circle img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.reviewsCard .info {
+  width: 85%
+}
+
+.detailsPageTabs .table td,
+.detailsPageTabs .table th {
+  font-size: 14px;
+  vertical-align: middle
+}
+
+.detailsPageTabs .table td p {
+  margin-bottom: 0
+}
+
+.detailsPageTabs .tabContent h3,
+.reviewForm h4 {
+  font-size: 20px;
+  font-weight: 700
+}
+
+.reviewForm h4 {
+  margin-bottom: 15px
+}
+
+.reviewForm .form-group {
+  margin-bottom: 25px
+}
+
+.reviewForm .form-group .form-control {
+  border-radius: 7px !important;
+  font-size: 16px;
+  height: 50px;
+  outline: none !important;
+  padding-left: 20px
+}
+
+.reviewForm .form-group textarea.form-control {
+  height: 200px;
+  padding-top: 25px !important;
+}
+
+.progressBarBox {
+  margin-bottom: 10px
+}
+
+.progress-bar {
+  font-size: 16px
+}
+
+.reviewsCard .info p {
+  font-size: 13px;
+  line-height: 22px
+}
+
+.productDetails h3.hd {
+  font-size: 18px !important;
 }

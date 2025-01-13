@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import Rating from "@mui/material/Rating";
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { RiShareForwardLine } from "react-icons/ri";
 import { useContext } from "react";
 import { MyContext } from "../../App";
 const ProductItems = (props) => {
@@ -31,6 +32,9 @@ const ProductItems = (props) => {
             </Button>
             <Button>
               <IoMdHeartEmpty style={{ fontSize: "20px" }} />
+            </Button>
+            <Button>
+              <RiShareForwardLine style={{ fontSize: "18px" }} />
             </Button>
           </div>
         </div>

@@ -12,7 +12,6 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { IoMailOutline } from "react-icons/io5";
-
 import ProductItems from "../../Components/ProductItems";
 import HomeCat from "../../Components/HomeCat";
 
