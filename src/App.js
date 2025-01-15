@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import ProductModal from "./Components/ProductModal";
 import Listing from "./Pages/Listing";
 import ProductDetails from "./Pages/ProductDetails";
+import Cart from "./Pages/Cart";
 
 const MyContext = createContext();
 function App() {
@@ -21,8 +22,8 @@ function App() {
   const getCountry = async (url) => {
     const responsive = await axios.get(url).then((res) => {
       setCountryList(res.data.data);
-      // console.log(res.data.data);
     });
+    console.log(responsive);
   };
 
   const values = {
@@ -48,6 +49,9 @@ function App() {
             exact={true}
             element={<ProductDetails />}
           />
+        </Routes>
+        <Routes>
+          <Route path="/cart" exact={true} element={<Cart />} />
         </Routes>
         <Footer />
         {isOpenProductModal === true && <ProductModal />}

@@ -5,6 +5,7 @@
 
 :root {
   --mainColor: #2cbbf9 !important;
+  --hoverColor1: #ed134a !important;
 }
 
 *::-webkit-scrollbar {
@@ -23,6 +24,10 @@ body {
 
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
 .cursor {
   cursor: pointer;
 }
@@ -34,6 +39,14 @@ body {
 
 .text-sml {
   font-size: 14px;
+}
+
+.txt-red {
+  color: #ed134a !important;
+}
+
+.txt-green {
+  color: #08ab0d !important;
 }
 
 .btn-sml {
@@ -53,12 +66,16 @@ body {
   background: var(--mainColor) !important;
   color: white !important;
   text-transform: capitalize !important;
-  ;
+}
+
+.btn-blue svg {
+  font-size: 22px !important;
 }
 
 .btn-lg {
   font-size: 15px !important;
   padding: 7px 30px !important;
+  font-weight: bold !important;
 }
 
 button {
@@ -587,6 +604,10 @@ nav .navPart2 ul li .submenu a button:hover {
 .productItem .info h4 {
   font-size: 15px;
   font-weight: 600;
+}
+
+.productItem .info h4:hover {
+  color: var(--hoverColor1) !important;
 }
 
 .productItem .action {
@@ -1392,4 +1413,79 @@ footer .copyright ul li a svg {
 
 .productDetails h3.hd {
   font-size: 18px !important;
+}
+
+.cartPage table thead {
+  background: #e3e3e3 !important;
+  overflow: hidden;
+}
+
+.cartPage table thead th {
+  border: 0px !important;
+}
+
+.cartPage table thead th:first-child {
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+
+.cartPage table thead th:last-child {
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.cartPage table th,
+.cartPage table td {
+  vertical-align: middle;
+  border-top: 0px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.cartItemImageWrapper {
+  width: 280px;
+}
+
+.cartItemImageWrapper .imageWrapper {
+  width: 100px;
+  overflow: hidden;
+}
+
+.cartItemImageWrapper .info h6 {
+  color: #343434;
+  font-weight: bold;
+}
+
+.cartItemImageWrapper .info h6:hover {
+  color: var(--hoverColor1) !important;
+}
+
+.remove svg {
+  font-size: 30px !important;
+  font-weight: bold !important;
+}
+
+.remove svg:hover {
+  color: var(--hoverColor1) !important;
+}
+
+.cartPage .quantityDropDown button {
+  zoom: 75%;
+}
+
+.cartPage table tbody tr:hover {
+  background: #fafafa !important;
+}
+
+.cartDetails {
+  border-radius: 7px !important;
+  position: sticky !important;
+  top: 20px !important;
+}
+
+.cartDetails h4 {
+  font-size: 16px;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding-bottom: 10px;
 }
