@@ -189,7 +189,7 @@ const Footer = (params) => {
         </div>
         <div className="copyright mt-3 pt-3 pb-3 d-flex align-items-center">
           <p>Copyright 2024 © All rights reserved.</p>
-          <ul className="list list-inline ml-auto mb-0">
+          <ul className="list list-inline ml-auto mb-0 socials">
             <li className="list-inline-item">
               <Link to="#">
                 <FaFacebookF />
