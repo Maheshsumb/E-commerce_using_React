@@ -593,6 +593,7 @@ nav .navPart2 ul li .submenu a button:hover {
   left: 10px;
 }
 
+
 .badge-primary {
   background: #2abef6;
 }
@@ -689,9 +690,9 @@ nav .navPart2 ul li .submenu a button:hover {
   font-size: 20px !important;
 }
 
-.product_row .productItem {
+/* .product_row .productItem {
   border-right: 1px solid transparent !important;
-}
+} */
 
 .product_row .swiper-slide:last-child .productItem {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;

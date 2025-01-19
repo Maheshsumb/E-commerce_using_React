@@ -6,7 +6,7 @@ import banner3 from "../../assets/images/banner3.jpg";
 import banner4 from "../../assets/images/banner4.jpg";
 import newsLatterImg from "../../assets/images/newsLaterImg.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import React from "react";
+import React, { useContext } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,8 +14,11 @@ import { Navigation } from "swiper/modules";
 import { IoMailOutline } from "react-icons/io5";
 import ProductItems from "../../Components/ProductItems";
 import HomeCat from "../../Components/HomeCat";
+import { MyContext } from "../../App";
 
 const Home = () => {
+  const context = useContext(MyContext);
+  context.setisHeaderFooter(true);
   return (
     <>
       <HomeBanner />
@@ -59,22 +62,22 @@ const Home = () => {
                   modules={[Navigation]}
                   className="mySwiper"
                 >
-                  <SwiperSlide>
+                  <SwiperSlide className="mr-2 ml-2">
                     <ProductItems />
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide className="mr-2 ml-2">
                     <ProductItems />
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide className="mr-2 ml-2">
                     <ProductItems />
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide className="mr-2 ml-2">
                     <ProductItems />
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide className="mr-2 ml-2">
                     <ProductItems />
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide className="mr-2 ml-2">
                     <ProductItems />
                   </SwiperSlide>
                 </Swiper>

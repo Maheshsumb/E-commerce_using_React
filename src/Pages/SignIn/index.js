@@ -11,7 +11,7 @@ const SignIn = () => {
   const context = useContext(MyContext);
   useEffect(() => {
     context.setisHeaderFooter(false);
-  }, []);
+  });
   return (
     <section className="section signInPage">
       <div className="shape-bottom">
