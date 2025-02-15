@@ -3,11 +3,11 @@
 # dependencies
 client/node_modules/
 server/node_modules/
-admin-dashboard/node_modules/
+admin/node_modules/
 /.pnp
 .pnp.js
 server/.env
-admin-dashboard/.env
+admin/.env
 # testing
 /coverage
 /temp.txt
