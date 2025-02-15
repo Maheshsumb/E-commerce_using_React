@@ -13,8 +13,10 @@ app.use(bodyParser.json());
 
 //Routes
 const categoryRoutes = require("./routes/category");
+const productRoutes = require("./routes/products");
 
 app.use("/api/category", categoryRoutes);
+app.use("/api/product", productRoutes);
 
 // Database Connection
 mongoose
