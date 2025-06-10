@@ -27,6 +27,7 @@ const Sidebar = () => {
             <Link to="/">
               <Button
                 className={`w-100 ${isActiveButton === 0 ? "active" : ""}`}
+                onClick={() => handleClick(0)}
               >
                 <span className="icon">
                   <RiDashboardFill />
@@ -77,6 +78,7 @@ const Sidebar = () => {
             <Link to="/">
               <Button
                 className={`w-100 ${isActiveButton === 2 ? "active" : ""}`}
+                onClick={() => handleClick(2)}
               >
                 <span className="icon">
                   <IoMdCart />
@@ -92,6 +94,7 @@ const Sidebar = () => {
             <Link to="/">
               <Button
                 className={`w-100 ${isActiveButton === 3 ? "active" : ""}`}
+                onClick={() => handleClick(3)}
               >
                 <span className="icon">
                   <MdMessage />
@@ -107,6 +110,7 @@ const Sidebar = () => {
             <Link to="/">
               <Button
                 className={`w-100 ${isActiveButton === 4 ? "active" : ""}`}
+                onClick={() => handleClick(44)}
               >
                 <span className="icon">
                   <IoMdNotifications />
@@ -122,6 +126,7 @@ const Sidebar = () => {
             <Link to="/">
               <Button
                 className={`w-100 ${isActiveButton === 5 ? "active" : ""}`}
+                onClick={() => handleClick(5)}
               >
                 <span className="icon">
                   <IoMdSettings />

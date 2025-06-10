@@ -206,6 +206,10 @@ header button svg {
   border-radius: 10px;
 }
 
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  top: 70px !important;
+}
+
 .dropDownInfo {
   padding-left: 15px;
 
@@ -323,6 +327,10 @@ header button svg {
   background: #f1f1f1;
 }
 
+.main .sideBarWrapper .sidebar ul li .active .icon svg {
+  color: var(--fontColor);
+}
+
 .main .sideBarWrapper .sidebar ul .submenu {
   padding: 23px;
   text-decoration: none !important;
@@ -379,6 +387,7 @@ a:hover {
 .main .sideBarWrapper .sidebar ul .submenuWrapper.expand .submenu {
   opacity: 1 !important;
   height: auto !important;
+  padding: 10px 0px;
 }
 
 .logoutWrapper {
