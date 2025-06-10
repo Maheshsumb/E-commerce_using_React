@@ -380,3 +380,52 @@ a:hover {
   opacity: 1 !important;
   height: auto !important;
 }
+
+.logoutWrapper {
+  padding: 0px 25px;
+}
+
+.logoutWrapper .logoutBox {
+  width: 100%;
+  height: 120px;
+  padding: 25px;
+  background: linear-gradient(to right, #c1d0ef 0%, #a1bffd 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoutWrapper .logoutBox::before {
+  content: '';
+  width: 70px;
+  height: 70px;
+  background: #7ca6fa;
+  position: absolute;
+  border-radius: 100%;
+  top: -20px;
+  right: -5px;
+}
+
+.logoutWrapper .logoutBox::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: #7ca6fa;
+  position: absolute;
+  border-radius: 100%;
+  top: 20px;
+  left: 20px;
+}
+
+.logoutWrapper .logoutBox button {
+  font-size: 14px !important;
+  font-weight: 600 Im !important;
+}
+
+.logoutWrapper .logoutBox button svg {
+  margin-right: 10px;
+  font-size: 18px !important;
+}
