@@ -10,6 +10,10 @@
   padding: 0px;
 }
 
+button {
+  text-transform: capitalize !important;
+}
+
 ::-webkit-scrollbar {
   width: 5px !important;
   height: 5px !important;
@@ -437,4 +441,92 @@ a:hover {
 .logoutWrapper .logoutBox button svg {
   margin-right: 10px;
   font-size: 18px !important;
+}
+
+.main .content {
+  width: 80%;
+  flex: 0 0 80%;
+}
+
+.content-right {
+  padding: 90px 30px;
+}
+
+.dashboardBoxWrapper {
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.dashboardBoxWrapper .dashboardBox {
+  width: 48%;
+  height: 170px;
+  border-radius: 10px;
+  background: #ccc;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.dashboardBoxWrapperRow .box {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+}
+
+.dashboardBoxWrapperRow .dashboardBox .col1 h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize !important;
+
+}
+
+.dashboardBoxWrapperRow .dashboardBox .col1 span {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 45px;
+
+}
+
+.dashboardBoxWrapperRow .dashboardBox .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.dashboardBoxWrapperRow .dashboardBox .icon svg {
+  font-size: 35px;
+  opacity: 0.4;
+  color: #fff;
+}
+
+.dashboardBoxWrapperRow .dashboardBox .optionsIcon {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.dashboardBoxWrapperRow .dashboardBox .chart {
+
+  opacity: 0.1;
+  bottom: 40px;
+  left: 20px;
+  position: absolute;
+}
+
+.dashboardBoxWrapperRow .dashboardBox .chart svg {
+  font-size: 130px !important;
+  color: #000;
+  font-weight: bold !important;
+
 }
