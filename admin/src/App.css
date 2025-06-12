@@ -468,6 +468,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;
   text-align: left;
+  color: #fff;
 }
 
 .dashboardBoxWrapperRow .box {
@@ -478,7 +479,7 @@ a:hover {
 
 .dashboardBoxWrapperRow .dashboardBox .col1 h4 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize !important;
 
 }
@@ -529,4 +530,36 @@ a:hover {
   color: #000;
   font-weight: bold !important;
 
+}
+
+.dashboardBoxWrapperRow .bottomEle {
+  position: relative;
+  top: 20px;
+}
+
+
+#long-menu .MuiPaper-elevation ul li {
+  color: #292929 !important;
+  opacity: 0.7;
+}
+
+.graphBox {
+  background: linear-gradient(#0859f6, #0f439c) !important;
+  border-radius: 10px;
+}
+
+.graphBox .optionsIcon {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.graphBox .optionsIcon svg {
+  color: #fff !important;
+  font-size: 20 !important;
+  opacity: 1 !important;
 }
