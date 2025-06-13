@@ -546,11 +546,21 @@ a:hover {
 .graphBox {
   background: linear-gradient(#0859f6, #0f439c) !important;
   border-radius: 10px;
+  padding: 25px;
+}
+
+.graphBox .bottomEle {
+  top: 0px;
+}
+
+.graphBox .bottomEle h6 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
 }
 
 .graphBox .optionsIcon {
   font-size: 22px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5) !important;
   cursor: pointer;
   min-width: 40px !important;
   width: 40px !important;
@@ -559,7 +569,13 @@ a:hover {
 }
 
 .graphBox .optionsIcon svg {
-  color: #fff !important;
+  color: rgba(0, 0, 0, 0.5) !important;
   font-size: 20 !important;
   opacity: 1 !important;
+}
+
+.graphBox p {
+  font-size: 13px;
+  opacity: 0.7;
+  color: #fff;
 }
