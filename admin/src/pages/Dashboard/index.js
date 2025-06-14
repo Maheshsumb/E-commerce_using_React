@@ -10,6 +10,17 @@ import { FaHistory } from "react-icons/fa";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { Button } from "@mui/material";
 
+// import { Chart } from "react-google-charts";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LineElement,
+  PointElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+} from "chart.js";
+
 const Dashboard = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -22,6 +33,59 @@ const Dashboard = () => {
   const options = ["last day", "last week", "last month", "last year"];
 
   const ITEM_HEIGHT = 48;
+  // Charts settings
+  ChartJS.register(
+    LineElement,
+    PointElement,
+    CategoryScale,
+    LinearScale,
+    Tooltip
+  );
+
+  const data = {
+    labels: ["Mon", "Thu", "Wed", "Thu", "Fri", "Sat"],
+    datasets: [
+      {
+        label: "Sales",
+        data: [320, 800, 200, 900, 400, 900],
+        borderColor: "#66b3ff",
+        backgroundColor: "transparent",
+        tension: 0.4,
+        pointRadius: 0,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false },
+    },
+    scales: {
+      x: {
+        ticks: { display: false },
+        grid: {
+          drawTicks: false,
+          borderColor: "transparent",
+          color: "#ffffff33",
+          lineWidth: 0.5,
+          borderDash: [10, 10],
+        },
+      },
+      y: {
+        ticks: { display: false },
+        grid: {
+          drawTicks: false,
+          borderColor: "transparent",
+          color: "#ffffff33",
+          lineWidth: 0.5,
+          borderDash: [10, 10],
+        },
+      },
+    },
+  };
   return (
     <>
       <div className="content-right w-100">
@@ -53,7 +117,7 @@ const Dashboard = () => {
               />
             </div>
           </div>
-          <div className="col-md-4 pl-0">
+          <div className="col-md-4 pl-2">
             <div className="box graphBox">
               <div className="d-flex align-items-center w-100 bottomEle">
                 <h6 className="text-white mb-0 mt-0">Total Sales</h6>
@@ -89,6 +153,11 @@ const Dashboard = () => {
                     ))}
                   </Menu>
                 </div>
+              </div>
+              <h3 className="text-white font-weight-bold">$3,787,681.00</h3>
+              <p>$3,578.90 in last month</p>
+              <div className="graphWrapper">
+                <Line data={data} options={chartOptions} height={200} />
               </div>
             </div>
           </div>
