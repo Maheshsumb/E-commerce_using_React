@@ -11,15 +11,15 @@ import { HiOutlineDotsVertical } from "react-icons/hi";
 import { Button } from "@mui/material";
 
 // import { Chart } from "react-google-charts";
-import { Line } from "react-chartjs-2";
 import {
-  Chart as ChartJS,
-  LineElement,
-  PointElement,
-  CategoryScale,
-  LinearScale,
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  CartesianGrid,
+  XAxis,
+  YAxis,
   Tooltip,
-} from "chart.js";
+} from "recharts";
 
 const Dashboard = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -34,58 +34,16 @@ const Dashboard = () => {
 
   const ITEM_HEIGHT = 48;
   // Charts settings
-  ChartJS.register(
-    LineElement,
-    PointElement,
-    CategoryScale,
-    LinearScale,
-    Tooltip
-  );
+  const data = [
+    { name: "Mon", Sales: 2000 },
+    { name: "Tue", Sales: 3000 },
+    { name: "Wed", Sales: 2000 },
+    { name: "Thu", Sales: 2780 },
+    { name: "Fri", Sales: 1890 },
+    { name: "Sat", Sales: 1390 },
+    { name: "Sun", Sales: 3490 },
+  ];
 
-  const data = {
-    labels: ["Mon", "Thu", "Wed", "Thu", "Fri", "Sat"],
-    datasets: [
-      {
-        label: "Sales",
-        data: [320, 800, 200, 900, 400, 900],
-        borderColor: "#66b3ff",
-        backgroundColor: "transparent",
-        tension: 0.4,
-        pointRadius: 0,
-      },
-    ],
-  };
-
-  const chartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { enabled: false },
-    },
-    scales: {
-      x: {
-        ticks: { display: false },
-        grid: {
-          drawTicks: false,
-          borderColor: "transparent",
-          color: "#ffffff33",
-          lineWidth: 0.5,
-          borderDash: [10, 10],
-        },
-      },
-      y: {
-        ticks: { display: false },
-        grid: {
-          drawTicks: false,
-          borderColor: "transparent",
-          color: "#ffffff33",
-          lineWidth: 0.5,
-          borderDash: [10, 10],
-        },
-      },
-    },
-  };
   return (
     <>
       <div className="content-right w-100">
@@ -119,45 +77,110 @@ const Dashboard = () => {
           </div>
           <div className="col-md-4 pl-2">
             <div className="box graphBox">
-              <div className="d-flex align-items-center w-100 bottomEle">
-                <h6 className="text-white mb-0 mt-0">Total Sales</h6>
-                <div className="ml-auto">
-                  <Button className="ml-auto optionsIcon" onClick={handleClick}>
-                    <HiOutlineDotsVertical />
-                  </Button>
-                  <Menu
-                    id="long-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    slotProps={{
-                      paper: {
-                        style: {
-                          maxHeight: ITEM_HEIGHT * 4.5,
-                          width: "20ch",
+              <div className="contentWrapper">
+                <div className="d-flex align-items-center w-100 bottomEle">
+                  <h6 className="text-white mb-0 mt-0">Total Sales</h6>
+                  <div className="ml-auto">
+                    <Button
+                      className="ml-auto optionsIcon"
+                      onClick={handleClick}
+                    >
+                      <HiOutlineDotsVertical />
+                    </Button>
+                    <Menu
+                      id="long-menu"
+                      anchorEl={anchorEl}
+                      open={open}
+                      onClose={handleClose}
+                      slotProps={{
+                        paper: {
+                          style: {
+                            maxHeight: ITEM_HEIGHT * 4.5,
+                            width: "20ch",
+                          },
                         },
-                      },
-                      list: {
-                        "aria-labelledby": "long-button",
-                      },
-                    }}
-                  >
-                    {options.map((option) => (
-                      <MenuItem
-                        key={option}
-                        selected={option === "Pyxis"}
-                        onClick={handleClose}
-                      >
-                        <FaHistory className="mr-2" /> {option}
-                      </MenuItem>
-                    ))}
-                  </Menu>
+                        list: {
+                          "aria-labelledby": "long-button",
+                        },
+                      }}
+                    >
+                      {options.map((option) => (
+                        <MenuItem
+                          key={option}
+                          selected={option === "Pyxis"}
+                          onClick={handleClose}
+                        >
+                          <FaHistory className="mr-2" /> {option}
+                        </MenuItem>
+                      ))}
+                    </Menu>
+                  </div>
                 </div>
+                <h3 className="text-white font-weight-bold">$3,787,681.00</h3>
+                <p>$3,578.90 in last month</p>
               </div>
-              <h3 className="text-white font-weight-bold">$3,787,681.00</h3>
-              <p>$3,578.90 in last month</p>
               <div className="graphWrapper">
-                <Line data={data} options={chartOptions} height={200} />
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={data}>
+                    <defs>
+                      <linearGradient
+                        id="colorSales"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stopColor="#1f5ccf"
+                          stopOpacity={0.5}
+                        />
+                        <stop
+                          offset="100%"
+                          stopColor="#1f5ccf"
+                          stopOpacity={0.1}
+                        />
+                      </linearGradient>
+                    </defs>
+
+                    <Area
+                      type="monotone"
+                      dataKey="Sales"
+                      stroke="#ccc"
+                      strokeWidth={1.5}
+                      fill="#1e5bce"
+                      dot={false}
+                      activeDot={{ r: 4 }}
+                    />
+
+                    <CartesianGrid
+                      stroke="rgba(176, 176, 176, 0.43)"
+                      strokeDasharray="2 2"
+                    />
+                    <XAxis dataKey="name" hide />
+                    <YAxis hide />
+
+                    <Tooltip
+                      cursor={false}
+                      contentStyle={{
+                        backgroundColor: "#f0f0f0",
+                        border: "1px solid #333",
+                        borderRadius: "8px",
+                        fontSize: "12px",
+                        color: "#5f5e6d",
+                      }}
+                      labelStyle={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        color: "#5f5e6d",
+                      }}
+                      itemStyle={{
+                        fontSize: "12px",
+                        color: "#5f5e6d",
+                      }}
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
               </div>
             </div>
           </div>
