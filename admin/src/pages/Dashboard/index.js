@@ -9,6 +9,14 @@ import MenuItem from "@mui/material/MenuItem";
 import { FaHistory } from "react-icons/fa";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { Button } from "@mui/material";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+
+import TextField from "@mui/material/TextField";
+import { FaEye } from "react-icons/fa";
+import { MdEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 
 // import { Chart } from "react-google-charts";
 import {
@@ -43,6 +51,26 @@ const Dashboard = () => {
     { name: "Sat", Sales: 1390 },
     { name: "Sun", Sales: 3490 },
   ];
+
+  // FilterCard
+  //Number of row
+  const [noOfRow, setnoOfRow] = React.useState("12");
+
+  const handleChangeNoOfRow = (event) => {
+    setnoOfRow(event.target.value);
+  };
+  //Category
+  const [category, setcategory] = React.useState("1");
+
+  const handleChangeCategory = (event) => {
+    setcategory(event.target.value);
+  };
+
+  //Brand
+  const [brand, setbrand] = React.useState("10");
+  const handleChangeBrand = (event) => {
+    setbrand(event.target.value);
+  };
 
   return (
     <>
@@ -183,6 +211,127 @@ const Dashboard = () => {
                 </ResponsiveContainer>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="card border-0 shadow p-3 mt-4">
+          <h3 className="hd">best selling products</h3>
+          <div className="row cardFilter mt-3">
+            <div className="col-md-3">
+              <h4>Show by</h4>
+              <FormControl
+                className="m-0 filterInput w-100"
+                sx={{ m: 1, minWidth: 120 }}
+              >
+                <InputLabel id="demo-simple-select-helper-label"></InputLabel>
+                <Select
+                  labelId="demo-simple-select-helper-label"
+                  id="demo-simple-select-helper"
+                  value={noOfRow}
+                  onChange={handleChangeNoOfRow}
+                >
+                  <MenuItem value={12}> </MenuItem>
+                  <MenuItem value={12}>12 row</MenuItem>
+                  <MenuItem value={24}>24 row</MenuItem>
+                  <MenuItem value={36}>36 row</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="col-md-3">
+              <h4>category by</h4>
+              <FormControl
+                className="m-0 filterInput w-100"
+                sx={{ m: 1, minWidth: 120 }}
+              >
+                <InputLabel id="demo-simple-select-helper-label"></InputLabel>
+                <Select
+                  labelId="demo-simple-select-helper-label"
+                  id="demo-simple-select-helper"
+                  value={category}
+                  onChange={handleChangeCategory}
+                >
+                  <MenuItem value={1}> </MenuItem>
+                  <MenuItem value={1}>Mens</MenuItem>
+                  <MenuItem value={2}>Womans</MenuItem>
+                  <MenuItem value={3}>Kids</MenuItem>
+                  <MenuItem value={4}>Accessories</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="col-md-3">
+              <h4>brand by</h4>
+              <FormControl
+                className="m-0 filterInput w-100"
+                sx={{ m: 1, minWidth: 120 }}
+              >
+                <InputLabel id="demo-simple-select-helper-label"></InputLabel>
+                <Select
+                  labelId="demo-simple-select-helper-label"
+                  id="demo-simple-select-helper"
+                  value={brand}
+                  onChange={handleChangeBrand}
+                >
+                  <MenuItem value={10}> </MenuItem>
+                  <MenuItem value={10}>ecstasy</MenuItem>
+                  <MenuItem value={20}>freeland</MenuItem>
+                  <MenuItem value={30}>rongdhonu </MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="col-md-3">
+              <h4>brand by</h4>
+              <TextField
+                className="filterInput"
+                id="outlined-search"
+                type="search"
+                placeholder="id / name / category..etc"
+              />
+            </div>
+          </div>
+
+          <div className="table-responsive mt-4">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th>uid</th>
+                  <th>product</th>
+                  <th>category</th>
+                  <th>brand</th>
+                  <th>price</th>
+                  <th>stock</th>
+                  <th>rating</th>
+                  <th>order</th>
+                  <th>sales</th>
+                  <th>action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td>Tops and skirt set for Female</td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td>$21.00</td>
+                  <td>30</td>
+                  <td>4.9 (16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td>
+                    <div className="tableAction d-flex align-items-center">
+                      <Button className="actionView">
+                        <FaEye />
+                      </Button>
+                      <Button className="actionEdit">
+                        <MdEdit />
+                      </Button>
+                      <Button className="actionDelete">
+                        <MdDelete />
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

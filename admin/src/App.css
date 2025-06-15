@@ -48,7 +48,7 @@ header {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 header .row {
@@ -210,7 +210,8 @@ header button svg {
   border-radius: 10px;
 }
 
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+#notification .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper,
+#account-menu .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
   top: 70px !important;
 }
 
@@ -588,4 +589,107 @@ a:hover {
 .graphWrapper {
   width: 100%;
   height: 220px;
+}
+
+.card {
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+
+.card .hd {
+  text-transform: capitalize !important;
+  font-size: 18px;
+  font-weight: bold;
+  color: #403e57 !important;
+}
+
+.cardFilter h4 {
+  font-size: 14px !important;
+  color: #403e57 !important;
+  font-weight: 700;
+  text-transform: uppercase !important;
+}
+
+.filterInput {
+  background: #f0f0f0 !important;
+  outline: none !important;
+
+}
+
+ul li {
+  text-transform: capitalize !important;
+}
+
+#demo-simple-select-helper {
+  text-transform: capitalize !important;
+}
+
+.filterInput input {
+  padding-right: 0px !important;
+}
+
+.table-responsive table {
+  text-transform: uppercase;
+}
+
+.table-responsive thead th {
+  background: #2571e8;
+  border-color: rgba(255, 255, 255, 0.1);
+  font-size: 13px !important;
+  color: #fff;
+}
+
+.table-responsive tbody td {
+  font-size: 13px;
+  color: #403e57 !important;
+  font-weight: 500 !important;
+}
+
+
+.tableAction button {
+  min-width: 35px;
+  width: 35px !important;
+  height: 35px !important;
+  padding: 2px !important;
+  border-radius: 10px;
+  margin: 0px 5px;
+
+}
+
+.tableAction button svg {
+  font-size: 16px !important;
+}
+
+.actionView {
+  background: #fbe5fb !important;
+  color: #b415db !important;
+  margin-left: 0px !important;
+}
+
+.actionView svg {
+  color: #b415db !important;
+}
+
+.actionEdit {
+  background: #dcfbe9 !important;
+  color: #269257 !important;
+}
+
+.actionEdit svg {
+  color: #269257 !important;
+}
+
+.actionDelete {
+  background: #ffd9e5 !important;
+  color: #ec1631 !important;
+  margin-right: 0px !important;
+}
+
+.actionDelete svg {
+  color: #ec1631 !important;
+
+}
+
+table td {
+  vertical-align: middle !important;
 }
