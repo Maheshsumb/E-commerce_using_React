@@ -17,7 +17,7 @@ import TextField from "@mui/material/TextField";
 import { FaEye } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
-
+import Pagination from "@mui/material/Pagination";
 // import { Chart } from "react-google-charts";
 import {
   ResponsiveContainer,
@@ -308,10 +308,274 @@ const Dashboard = () => {
               <tbody>
                 <tr>
                   <td>#1</td>
-                  <td>Tops and skirt set for Female</td>
+                  <td>
+                    <div className="d-flex productBox align-items-center">
+                      <div className="productImg">
+                        <div className="img">
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                            alt=""
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info pl-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
                   <td>womans</td>
                   <td>richman</td>
-                  <td>$21.00</td>
+                  <td>
+                    <div style={{ width: "50px" }}>
+                      <del className="old">$21.00</del>
+                      <span className="new text-success">$20.99</span>
+                    </div>
+                  </td>
+                  <td>30</td>
+                  <td>4.9 (16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td>
+                    <div className="tableAction d-flex align-items-center">
+                      <Button className="actionView">
+                        <FaEye />
+                      </Button>
+                      <Button className="actionEdit">
+                        <MdEdit />
+                      </Button>
+                      <Button className="actionDelete">
+                        <MdDelete />
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex productBox align-items-center">
+                      <div className="productImg">
+                        <div className="img">
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                            alt=""
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info pl-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td>
+                    <div style={{ width: "50px" }}>
+                      <del className="old">$21.00</del>
+                      <span className="new text-success">$20.99</span>
+                    </div>
+                  </td>
+                  <td>30</td>
+                  <td>4.9 (16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td>
+                    <div className="tableAction d-flex align-items-center">
+                      <Button className="actionView">
+                        <FaEye />
+                      </Button>
+                      <Button className="actionEdit">
+                        <MdEdit />
+                      </Button>
+                      <Button className="actionDelete">
+                        <MdDelete />
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex productBox align-items-center">
+                      <div className="productImg">
+                        <div className="img">
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                            alt=""
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info pl-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td>
+                    <div style={{ width: "50px" }}>
+                      <del className="old">$21.00</del>
+                      <span className="new text-success">$20.99</span>
+                    </div>
+                  </td>
+                  <td>30</td>
+                  <td>4.9 (16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td>
+                    <div className="tableAction d-flex align-items-center">
+                      <Button className="actionView">
+                        <FaEye />
+                      </Button>
+                      <Button className="actionEdit">
+                        <MdEdit />
+                      </Button>
+                      <Button className="actionDelete">
+                        <MdDelete />
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex productBox align-items-center">
+                      <div className="productImg">
+                        <div className="img">
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                            alt=""
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info pl-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td>
+                    <div style={{ width: "50px" }}>
+                      <del className="old">$21.00</del>
+                      <span className="new text-success">$20.99</span>
+                    </div>
+                  </td>
+                  <td>30</td>
+                  <td>4.9 (16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td>
+                    <div className="tableAction d-flex align-items-center">
+                      <Button className="actionView">
+                        <FaEye />
+                      </Button>
+                      <Button className="actionEdit">
+                        <MdEdit />
+                      </Button>
+                      <Button className="actionDelete">
+                        <MdDelete />
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex productBox align-items-center">
+                      <div className="productImg">
+                        <div className="img">
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                            alt=""
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info pl-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td>
+                    <div style={{ width: "50px" }}>
+                      <del className="old">$21.00</del>
+                      <span className="new text-success">$20.99</span>
+                    </div>
+                  </td>
+                  <td>30</td>
+                  <td>4.9 (16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td>
+                    <div className="tableAction d-flex align-items-center">
+                      <Button className="actionView">
+                        <FaEye />
+                      </Button>
+                      <Button className="actionEdit">
+                        <MdEdit />
+                      </Button>
+                      <Button className="actionDelete">
+                        <MdDelete />
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex productBox align-items-center">
+                      <div className="productImg">
+                        <div className="img">
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                            alt=""
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info pl-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td>
+                    <div style={{ width: "50px" }}>
+                      <del className="old">$21.00</del>
+                      <span className="new text-success">$20.99</span>
+                    </div>
+                  </td>
                   <td>30</td>
                   <td>4.9 (16)</td>
                   <td>380</td>
@@ -332,6 +596,9 @@ const Dashboard = () => {
                 </tr>
               </tbody>
             </table>
+            <div className="d-flex tableFooter">
+              <Pagination count={10} color="primary" className="pagination" />
+            </div>
           </div>
         </div>
       </div>
